@@ -147,7 +147,7 @@ void p1010() {
 
   total = (num_pc1 * val_pc1) + (num_pc2 * val_pc2);
 
-  printf("VALOR A PAGAR: R$ %.2lf", total);
+  printf("VALOR A PAGAR: R$ %.2lf \n", total);
   
 }
 
@@ -155,5 +155,5 @@ int main() {
   
   p1010();
   
-  return 0;
+  system("pause");
 }
