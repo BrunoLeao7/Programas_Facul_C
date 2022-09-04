@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void p1001() {
 
@@ -151,9 +152,22 @@ void p1010() {
   
 }
 
+void p1011() {
+
+  int raio;
+  double volume;
+
+  scanf("%d", &raio);
+
+  volume = (4.0/3)*3.14159*(raio*raio*raio);
+
+  printf("VOLUME = %.3lf \n", volume);
+
+}
+
 int main() {
   
-  p1010();
+  p1011();
   
   system("pause");
 }
