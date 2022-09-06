@@ -130,7 +130,7 @@ void p1009() {
   char nome_fun[100];
   double sal, vendas, sal_total;
 
-  scanf("%s", &nome_fun);
+  scanf("%s", nome_fun);
   scanf("%lf", &sal);
   scanf("%lf", &vendas);
 
