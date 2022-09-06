@@ -6,14 +6,16 @@ void p1001() {
     
   int a, b, x;
 
-  printf("Escreva o valor de A: ");
+  printf("Programa 1001 \n");
+
+  printf("\nEscreva o valor de A: ");
   scanf("%d",&a);
   printf("Escreva o valor de B: ");
   scanf("%d",&b);
 
   x=a+b;
 
-  printf("Resultado: %d",x);
+  printf("Resultado: %d\n",x);
   
 }
 
@@ -167,7 +169,7 @@ void p1011() {
 
 int main() {
   
-  p1011();
+  p1001();
   
   system("pause");
 }
