@@ -23,6 +23,7 @@ void p1002() {
 
   double area, raio;
 
+  printf("Digite o raio da circunferencia: ");
   scanf("%lf", &raio);
 
   area = 3.14159 * (raio * raio);
@@ -35,7 +36,9 @@ void p1003() {
 
   int a, b, x;
 
+  printf("Digite o primeiro valor: ");
   scanf("%d", &a);
+  printf("Digite o segundo valor: ");
   scanf("%d", &b);
 
   x = a+b;
@@ -48,7 +51,9 @@ void p1004() {
 
   int a, b, x;
 
+  printf("Digite o primeiro valor: ");
   scanf("%d", &a);
+  printf("Digite o primeiro valor:");
   scanf("%d", &b);
 
   x = a*b;
@@ -61,7 +66,9 @@ void p1005() {
 
   double a, b, media;
 
+  printf("Digite o primeiro valor: ");
   scanf("%lf", &a);
+  printf("Digite o segundo valor: ");
   scanf("%lf", &b);
 
   media = ((a*3.5) + (b*7.5))/11;
@@ -74,8 +81,11 @@ void p1006() {
 
   double a, b, c, media;
 
+  printf("Digite o primeiro valor: ");
   scanf("%lf", &a);
+  printf("Digite o segundo valor: ");
   scanf("%lf", &b);
+  printf("Digite o terceiro valor: ");
   scanf("%lf", &c);
 
   media = ((a*2) + (b*3) + (c*5))/10;
@@ -98,9 +108,13 @@ void p1007() {
 
   int a, b, c, d, x;
 
+  printf("Digite o primeiro valor: ");
   scanf("%d", &a);
+  printf("Digite o segundo valor: ");
   scanf("%d", &b);
+  printf("Digite o terceiro valor: ");
   scanf("%d", &c);
+  printf("Digite o quarto valor: ");
   scanf("%d", &d);
 
   x = (a*b - c*d);
@@ -114,8 +128,11 @@ void p1008() {
   int n_func, hr_trb;
   double sal_hr, salary;
 
+  printf("Digite o numero do funcionario: ");
   scanf("%d", &n_func);
+  printf("Digite as horas de trabalho: ");
   scanf("%d", &hr_trb);
+  printf("Digite o salario por hora: ");
   scanf("%lf", &sal_hr);
 
   salary = (sal_hr*hr_trb);
@@ -130,8 +147,11 @@ void p1009() {
   char nome_fun[100];
   double sal, vendas, sal_total;
 
+  printf("Digite o numero do funcionario: ");
   scanf("%s", nome_fun);
+  printf("Digite o salario do funcionario: ");
   scanf("%lf", &sal);
+  printf("Digite o valor das vendas do funcionario: ");
   scanf("%lf", &vendas);
 
   sal_total = sal + (vendas*0.15);
@@ -145,12 +165,14 @@ void p1010() {
   int cod_pc1, num_pc1, cod_pc2, num_pc2;
   double val_pc1, val_pc2, total;
 
+  printf("Digite o codigo, a quantidade e o valor do produto separados por um espaco nessa ordem: \n");
   scanf("%d %d %lf", &cod_pc1, &num_pc1, &val_pc1);
+  printf("\nDigite o codigo, a quantidade e o valor do produto separados por um espaco nessa ordem: \n");
   scanf("%d %d %lf", &cod_pc2, &num_pc2, &val_pc2);
 
   total = (num_pc1 * val_pc1) + (num_pc2 * val_pc2);
 
-  printf("VALOR A PAGAR: R$ %.2lf \n", total);
+  printf("\nVALOR A PAGAR: R$ %.2lf \n", total);
   
 }
 
@@ -159,6 +181,7 @@ void p1011() {
   int raio;
   double volume;
 
+  printf("Digite o raio da esfera: ");
   scanf("%d", &raio);
 
   volume = (4.0/3)*3.14159*(raio*raio*raio);
@@ -167,9 +190,184 @@ void p1011() {
 
 }
 
+void p1012() {
+
+  double a, b, c, a_tri, a_circ, a_trap, a_quad, a_ret;
+
+  printf("Digite o primeiro valor: ");
+  scanf("%lf", &a);
+  printf("Digite o segundo valor: ");
+  scanf("%lf", &b);
+  printf("Digite o terceiro valor: ");
+  scanf("%lf", &c);
+
+  a_tri = (a*c)/2;
+  a_circ = 3.14159*(c*c);
+  a_trap = ((a+b)*c)/2;
+  a_quad = b*b;
+  a_ret = a*b;
+
+  printf("\nTriangulo: %.3lf", a_tri);
+  printf("\nCirculo: %.3lf", a_circ);
+  printf("\nTrapezio: %.3lf", a_trap);
+  printf("\nQuadrado: %.3lf", a_quad);
+  printf("\nRetangulo: %.3lf", a_ret);
+
+}
+
+void p1013() {
+
+  int a, b, c, maiorab, maiorabc;
+
+  printf("Digite o primeiro valor: ");
+  scanf("%d", &a);
+  printf("Digite o segundo valor: ");
+  scanf("%d", &b);
+  printf("Digite o terceiro valor: ");
+  scanf("%d", &c);
+
+  maiorab = (a + b + abs(a - b))/2;
+  maiorabc = (maiorab + c + abs(maiorab - c))/2;
+
+  if(maiorab > maiorabc) {
+
+    printf("%d", maiorab);
+    printf(" eh o maior\n");
+
+  }
+  else {
+
+    printf("%d", maiorabc);
+    printf(" eh o maior\n");
+
+  }
+
+}
+
+void p1014() {
+
+int dist;
+double comb_gast, cons_med;
+
+printf("Digite a distancia percorrida: ");
+scanf("%d", &dist);
+printf("Digite o combustivel gasto: ");
+scanf("%lf", &comb_gast);
+
+cons_med = dist/comb_gast;
+
+printf("%.3lf km/l", cons_med);
+
+}
+
+int prog;
+
 int main() {
   
-  p1001();
-  
+  printf("Escolha o programa desejado - 1 ao 50 \n");
+  printf("Digite o numero do programa: ");
+  scanf("%d", &prog);
+
+  switch(prog) {
+
+    case 1:
+      system("cls");
+
+      p1001();
+
+      break;
+
+    case 2:
+      system("cls");
+
+      p1002();
+
+      break;
+
+    case 3:
+      system("cls");
+
+      p1003();
+
+      break;
+
+    case 4:
+      system("cls");
+
+      p1004();
+
+      break;
+
+    case 5:
+      system("cls");
+
+      p1005();
+
+      break;
+
+    case 6:
+      system("cls");
+
+      p1006();
+
+      break;
+
+    case 7:
+      system("cls");
+
+      p1007();
+
+      break;
+
+    case 8:
+      system("cls");
+
+      p1008();
+
+      break;
+
+    case 9:
+      system("cls");
+
+      p1009();
+
+      break;
+
+    case 10:
+      system("cls");
+
+      p1010();
+
+      break;
+
+    case 11:
+      system("cls");
+
+      p1011();
+
+      break;
+
+      case 12:
+      system("cls");
+
+      p1012();
+
+      break;
+
+    case 13:
+      system("cls");
+
+      p1013();
+
+      break;
+
+    case 14:
+      system("cls");
+
+      p1014();
+
+      break;
+  }
+
   system("pause");
 }
