@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 void p1001() {
 
@@ -260,6 +261,88 @@ printf("%.3lf km/l", cons_med);
 
 }
 
+void p1015() {
+
+  double x1, y1, x2, y2, dist;
+
+  printf("Digite a coordenada do ponto 1: ");
+  scanf("%lf %lf", &x1, &y1);
+  printf("Digite a coordenada do ponto 2: ");
+  scanf("%lf %lf", &x2, &y2);
+
+  dist = sqrt(((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1)));
+
+  printf("A distancia entre os dois pontos e: %.4lf\n", dist);
+
+}
+
+void p1016() {
+
+    int dist, tempo;
+    
+    printf("Digite a distancia: ");
+    scanf("%d", &dist);
+    
+    tempo = (60*dist)/30;
+    
+    printf("%d minutos\n", tempo);
+
+}
+
+void p1017() {
+
+  int tempo, velo;
+  double litros, dist;
+
+  printf("Digite o tempo da viagem: ");
+  scanf("%d", &tempo);
+  printf("Digite a velocidade media do veiculo: ");
+  scanf("%d", &velo);
+
+  dist = tempo*velo;
+  litros = dist/12;
+
+  printf("%.3lf litros\n", litros);
+
+}
+
+void p1018() {
+
+  int valor, cem, cinq, vinte, dez, cinco, dois, um;
+
+  scanf("%d", &valor);
+
+  printf("%d\n", valor);
+
+  cem = valor/100;
+  printf("%d notas de R$ 100,00\n", cem);
+
+  valor = valor%100;
+  cinq = valor/50;
+  printf("%d notas de R$ 50,00\n", cinq);
+
+  valor = valor%50;
+  vinte = valor/20;
+  printf("%d notas de R$ 20,00\n", vinte);
+
+  valor = valor%20;
+  dez = valor/10;
+  printf("%d notas de R$ 10,00\n", dez);
+
+  valor = valor%10;
+  cinco = valor/5;
+  printf("%d notas de R$ 5,00\n", cinco);
+
+  valor = valor%5;
+  dois = valor/2;
+  printf("%d notas de R$ 2,00\n", dois);
+
+  valor = valor%2;
+  um = valor/1;
+  printf("%d notas de R$ 1,00\n", um);
+
+}
+
 int prog;
 
 int main() {
@@ -365,6 +448,34 @@ int main() {
       system("cls");
 
       p1014();
+
+      break;
+
+    case 15:
+      system("cls");
+
+      p1015();
+
+      break;
+
+    case 16:
+      system("cls");
+
+      p1016();
+
+      break;
+
+    case 17:
+      system("cls");
+
+      p1017();
+
+      break;
+
+    case 18:
+      system("cls");
+
+      p1018();
 
       break;
   }
