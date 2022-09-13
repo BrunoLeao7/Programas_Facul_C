@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include <math.h>
 
-//Teste
-
 void p1001() {
 
     
