@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
 
 int main(void)
 {
@@ -6,13 +8,13 @@ int main(void)
     double av1, av2, media;
 
     printf("Escreva a nota da AV1: ");
-    scanf("%f", &av1);
+    scanf("%lf", &av1);
     printf("Escreva a nota da AV2: ");
-    scanf("%f", &av2);
+    scanf("%lf", &av2);
 
-    media = (av1 * 4.5) + (av2 * 6.5)/11;
+    media = (av1 * 4.5 + av2 * 6.5)/11;
 
-    printf("Media do aluno: %.1f", media);
+    printf("Media do aluno: %.1lf\n", media);
 
     system("pause");
 }
